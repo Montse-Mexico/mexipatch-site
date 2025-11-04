@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mexipatch — Créations artisanales</title>
+  <style>
+    :root{--accent:#C75A3A;--nav:#2B3A67}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#F9F4EF;color:#333;line-height:1.6}
+    header{background:var(--accent);color:#fff;padding:40px 16px;text-align:center}
+    header img.logo{width:140px;display:block;margin:0 auto 8px}
+    nav{background:var(--nav);display:flex;justify-content:center;padding:10px 0}
+    nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:700}
+    .container{max-width:1000px;margin:0 auto;padding:28px 16px}
+    h2,h3{color:#2B3A67}
+    .note{font-style:italic;color:#555;margin-top:8px}
+
+    /* Carousel core */
+    .carousel{position:relative;overflow:hidden;margin-top:20px;border-radius:8px;background:#fff;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .carousel-track{display:flex;flex-wrap:nowrap;transition:transform .45s ease;will-change:transform}
+    .carousel-slide{flex:0 0 100%;box-sizing:border-box;padding:6px;text-align:center}
+    .carousel-slide img{max-height:250px;max-width:90%;width:auto;height:auto;object-fit:contain;margin:0 auto;display:block;border-radius:6px;background:#fff}
+    .carousel-button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;padding:8px 12px;cursor:pointer;border-radius:4px;z-index:5}
+    .carousel-button.prev{left:10px}
+    .carousel-button.next{right:10px}
+    .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+    .dot{width:12px;height:12px;border-radius:50%;border:none;background:#ddd;cursor:pointer}
+    .dot.active{background:var(--accent)}
+
+    /* Responsive tweaks */
+    @media(min-width:700px){
+      .carousel-slide{padding:12px}
+      .carousel-slide img{max-width:70%}
+    }
+
+    footer{background:var(--nav);color:#fff;text-align:center;padding:14px;margin-top:30px}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-mexipatch.png" alt="Logo Mexipatch" class="logo">
+    <h1>Mexipatch</h1>
+    <p>Créations artisanales faites à la main</p>
+  </header>
+
+  <nav>
+    <a href="#galerie">Collections</a>
+    <a href="#histoire">Notre histoire</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="galerie" class="container">
+    <h2>Nos Créations</h2>
+    <p>Découvrez une sélection unique de créations artisanales, fabriquées avec passion et inspirées de mes origines mexicaines.</p>
+
+    <h3>Patchworks</h3>
+    <p>Bientôt disponibles...</p>
+
+    <h3>Housses de coussins</h3>
+    <p>Bientôt disponibles...</p>
+
+    <!-- SAC À DOS CAROUSEL -->
+    <h3>Sac à dos éveil enfants</h3>
+    <div class="carousel" id="backpackCarousel" aria-label="Galerie sac à dos éveil">
+      <div class="carousel-track">
+        <figure class="carousel-slide">
+          <img src="Sac à dos garçons 1.jpg" alt="Tapis de jeu transportable en sac à dos – version ouverte">
+          <figcaption>Tapis de jeu transportable en sac à dos – version ouverte</figcaption>
+        </figure>
+        <figure class="carousel-slide">
+          <img src="Sac à dos garçons 2.jpg" alt="Tapis de jeu transportable – vue intérieure">
+          <figcaption>Tapis de jeu transportable – vue intérieure</figcaption>
+        </figure>
+        <figure class="carousel-slide">
+          <img src="Sac à dos garçons 3.jpg" alt="Sac à dos refermé – version garçons">
+          <figcaption>Sac à dos refermé – version garçons</figcaption>
+        </figure>
+      </div>
+
+      <button class="carousel-button prev" aria-label="Image précédente" data-carousel="backpackCarousel">&larr;</button>
+      <button class="carousel-button next" aria-label="Image suivante" data-carousel="backpackCarousel">&rarr;</button>
+
+      <div class="carousel-dots" role="tablist" aria-label="Sélecteur d'images" data-carousel="backpackCarousel">
+        <button class="dot active" data-index="0" aria-label="Image 1"></button>
+        <button class="dot" data-index="1" aria-label="Image 2"></button>
+        <button class="dot" data-index="2" aria-label="Image 3"></button>
+      </div>
+    </div>
+    <p class="note">Légende : Tapis de jeu transportable en sac à dos – garçons</p>
+
+    <!-- POUPÉES CAROUSEL -->
+    <h3>Poupées en tissu</h3>
+    <div class="carousel" id="dollsCarousel" aria-label="Galerie poupées en tissu">
+      <div class="carousel-track">
+        <figure class="carousel-slide">
+          <img src="Poupees-1.jpg" alt="Poupée en tissu – modèle 1">
+          <figcaption>Poupée en tissu – modèle 1</figcaption>
+        </figure>
+        <figure class="carousel-slide">
+          <img src="Poupees-2.jpg" alt="Poupée en tissu – modèle 2">
+          <figcaption>Poupée en tissu – modèle 2</figcaption>
+        </figure>
+      </div>
+
+      <button class="carousel-button prev" aria-label="Image précédente" data-carousel="dollsCarousel">&larr;</button>
+      <button class="carousel-button next" aria-label="Image suivante" data-carousel="dollsCarousel">&rarr;</button>
+
+      <div class="carousel-dots" role="tablist" aria-label="Sélecteur d'images" data-carousel="dollsCarousel">
+        <button class="dot active" data-index="0" aria-label="Image 1"></button>
+        <button class="dot" data-index="1" aria-label="Image 2"></button>
+      </div>
+    </div>
+    <p class="note">Légende : Poupées en tissu faites à la main</p>
+
+    <h3>Divers</h3>
+    <p>Bientôt disponibles...</p>
+  </section>
+
+  <section id="histoire" class="container">
+    <h2>Notre histoire</h2>
+    <p>Mexicaine d’origine, je vis en Lot-et-Garonne dans une ancienne petite ferme du XIXème siècle, rénovée mais toujours en cours de travaux ! J’ai quand même pu y aménager mon atelier patchworks où je ne tarderai pas à être à l’étroit bien évidemment. Mais tout est déjà là maintenant pour pouvoir m’adonner à mon passe-temps favori… Le plus difficile étant de « grignoter » des mètres carrés supplémentaires sur l’espace vital de mon gentil mari qui doit quand même continuer à faire évoluer mon site !</p>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Pour toute commande ou demande de personnalisation :</p>
+    <p>Email : <a href="mailto:monchis9@outlook.fr">monchis9@outlook.fr</a></p>
+    <a href="mailto:monchis9@outlook.fr" class="btn">Envoyer un message</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Créations artisanales mexicaines — Tous droits réservés.
+  </footer>
+
+<script>
+/* Shared carousel init: no autoplay, handles multiple carousels */
+(function initAllCarousels(){
+  function initCarousel(rootId){
+    const carousel = document.getElementById(rootId);
+    if(!carousel) return;
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prev = carousel.querySelector('.carousel-button.prev');
+    const next = carousel.querySelector('.carousel-button.next');
+    const dots = Array.from(carousel.querySelectorAll('.dot'));
+    let index = 0;
+
+    function setSizes(){
+      const n = slides.length || 1;
+      track.style.width = (n * 100) + '%';
+      slides.forEach(s => { s.style.width = (100 / n) + '%'; s.style.flex = '0 0 ' + (100 / n) + '%'; });
+      update(0);
+    }
+
+    function update(newIndex){
+      index = ((newIndex % slides.length) + slides.length) % slides.length;
+      const shiftPer = 100 / slides.length;
+      track.style.transform = 'translateX(' + (-index * shiftPer) + '%)';
+      dots.forEach((d,i)=> d.classList.toggle('active', i===index));
+    }
+
+    if(prev) prev.addEventListener('click', ()=> update(index-1));
+    if(next) next.addEventListener('click', ()=> update(index+1));
+    dots.forEach(d => d.addEventListener('click', e => update(Number(e.target.dataset.index))));
+
+    window.addEventListener('resize', setSizes);
+    window.addEventListener('keydown', e => { if(e.key==='ArrowRight') update(index+1); if(e.key==='ArrowLeft') update(index-1); });
+
+    // wait for images to load then set sizes
+    const imgs = track.querySelectorAll('img');
+    let loaded = 0;
+    if(imgs.length===0){ setTimeout(setSizes,50); }
+    else {
+      imgs.forEach(img=>{
+        if(img.complete) loaded++;
+        else { img.addEventListener('load', ()=> { loaded++; if(loaded===imgs.length) setSizes(); }); img.addEventListener('error', ()=> { loaded++; if(loaded===imgs.length) setSizes(); }); }
+      });
+      if(loaded===imgs.length) setSizes();
+      setTimeout(setSizes,300);
+    }
+  }
+
+  initCarousel('backpackCarousel');
+  initCarousel('dollsCarousel');
+})();
+</script>
+
+</body>
+</html>
